@@ -1,0 +1,22 @@
+:root { --orange: #ff7f11; --beige: #fff8e1; --brun: #4e342e; }
+*{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+body{background: var(--beige); color: var(--brun);}
+header{background: var(--orange);; color:white; padding:20px; text-align:center;}
+header h1{letter-spacing:1px;}
+nav{margin-top:10px;}
+nav button{background:white; color:var(--orange); border:none; padding:8px 15px; margin:5px; border-radius:20px; cursor:pointer; font-weight:bold;}
+
+.produits{display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:30px;}
+.carte{background:white; width:300px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); overflow:hidden; transition:0.3s;}
+.carte:hover{transform: scale(1.03);}
+.carte img{width:100%; height:200px; object-fit:cover;}
+.carte-contenu{padding:15px;}
+.carte-contenu h3{color:var(--orange);}
+.carte-contenu p{margin:8px 0; font-size:14px;}
+.prix{font-weight:bold; font-size:18px; color:green;}
+.carte-contenu button{width:100%; background:var(--orange); color:white; border:none; padding:10px; border-radius:8px; margin-top:10px; cursor:pointer;}
+
+#panier{position:fixed; top:0px; right:0px; background:white; border:2px solid var(--orange); padding:8px; border-radius:10px; min-width:250px;}
+#panier h3{margin-bottom:10px;}
+#liste-panier{list-style:none; font-size:14px;}
+#commander{background:green; color:white; border:none; padding:10px; width:100%; margin-top:10px; border-radius:8px; cursor:pointer;}

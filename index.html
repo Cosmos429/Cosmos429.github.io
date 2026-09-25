@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Liaison aavec css-->
+<link rel="stylesheet" href="style.css">
+<title>DEBBY'S SHOP - Restaurant</title>
+</head>
+<body>
+
+<header>
+    <h1>🍲 DEBBY'S SHOP 🍝</h1>
+    <!--<p>Nos menus: Koliko - Akpan - Spaghetti</p>-->
+    <nav>
+        <button onclick="filtrer('tout')">Tout</button>
+        <button onclick="filtrer('koliko')">Koliko</button>
+        <button onclick="filtrer('akpan')">Akpan</button>
+        <button onclick="filtrer('spaghetti')">Spaghetti</button>
+    </nav>
+</header>
+
+
+<section class="produits" id="produits">
+    <!-- Produit 1 -->
+    <div class="carte" data-cat="koliko">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.cdJkxgJrKB5N6XYefCW2uAHaEK?r=0&w=1920&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Koliko">
+        <div class="carte-contenu">
+            <h3>Koliko Croustillant</h3>
+            <p>Igname fris, croustillant dehors, moelleux dedans. Plat de 2 boules.</p>
+            <span class="prix">1000 FCFA</span>
+            <button onclick="ajouter('Koliko Croustillant', 1000)">Ajouter au panier</button>
+        </div>
+    </div>
+    <!-- Produit 2 -->
+    <div class="carte" data-cat="akpan">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.uqU8Y2YIAtGEf2sPdD6e-wHaFQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Akpan">
+        <div class="carte-contenu">
+            <h3>Akpan</h3>
+            <p>Akpan à base de maïs fermenté. Très rafraîchissant accompagné de poisson.</p>
+            <span class="prix">500 FCFA</span>
+            <button onclick="ajouter('Akpan', 500)">Ajouter au panier</button>
+        </div>
+    </div>
+    <!-- Produit 3 -->
+    <div class="carte" data-cat="spaghetti">
+        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="Spaghetti">
+        <div class="carte-contenu">
+            <h3>Spaghetti Poulet</h3>
+            <p>Spaghetti sauté à la togolaise avec poulet, légumes et épices.</p>
+            <span class="prix">2000 FCFA</span>
+            <button onclick="ajouter('Spaghetti Poulet', 2000)">Ajouter au panier</button>
+        </div>
+    </div>
+</section>
+
+<div id="panier">
+    <h3>🛒 Panier (<span id="count">0</span>)</h3>
+    <ul id="liste-panier"><li>Panier vide</li></ul>
+    <p><b>Total: <span id="total">0</span> FCFA</b></p>
+    <button id="commander" onclick="commander()">Commander via WhatsApp</button>
+</div>
+
+<!-- Liaison avec le fichier JS-->
+</body>
+
+<div id="panier">
+    <h3>🛒 Panier (<span id="count">0</span>)</h3>
+    <ul id="liste-panier"><li>Panier vide</li></ul>
+    <p><b>Total: <span id="total">0</span> FCFA</b></p>
+    <button id="commander" onclick="commander()">Commander via WhatsApp</button>
+</div>
+
+<script src="java.js"></script>
+
+</html>
